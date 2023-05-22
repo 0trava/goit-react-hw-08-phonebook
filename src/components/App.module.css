@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.section_title{
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    margin-top: 1rem;
+    font-weight: 900;
+
+    margin-bottom: 20px;
+}
+
