@@ -130,3 +130,23 @@ body{
   .span a {
     color: var(--clr);
   }
+
+  .close {
+
+    /* background-color: #8B57C6; */
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 9;
+    cursor: pointer;
+  }
+  
+  .close svg {
+    width: 20px;
+    height: 20px;
+    stroke: white;
+  }
+  
+  .close:hover svg {
+    stroke: #8B57C6;
+  }

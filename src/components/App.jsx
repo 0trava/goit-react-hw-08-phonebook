@@ -20,7 +20,7 @@ export const App = () => {
       return (
         <div className={css.container}>
         <Header></Header> 
-        {/* <UsersFormSignUp/> */}
+        <UsersFormSignUp/>
         {/* <UsersFormSignIn/>   */}
         <section className={css.body}>
             <div className={css.contact_boximg}>

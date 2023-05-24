@@ -6,6 +6,12 @@ const UsersForm = () => {
   return (
     <div className={css.body}>
       <div className={css.form_container}>
+          <div className={css.close} onClick={()=> {}}>
+            <svg>
+              <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#close`} />
+            </svg>
+          </div>
+        
         <form className={css.form}>
             <h2 className={css.title}>Create Account</h2>
 
@@ -27,7 +33,7 @@ const UsersForm = () => {
 
             <input value="Get Started" type="submit" className={css.submite}/>
 
-            <span className={css.span}>Already have an account? <a href="#">Sign in</a></span>
+            <span className={css.span}>Already have an account? <a href="">Sign in</a></span>
         </form>
       </div>
     </div>
