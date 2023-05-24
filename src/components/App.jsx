@@ -15,15 +15,20 @@ export const App = () => {
 
 // РЕНДНЕРІНГ сторінки
       return (
-        <>
-              <Header></Header>   
-      <div className={css.container}>
-        <h1 className={css.section_title}>Phonebook</h1>
-        <ContactForm />
-        <h2 className={css.section_title}>Contacts</h2>
-        <Filter/>
-        <ContactsList></ContactsList>
-      </div>
-        </>
+        <div className={css.container}>
+        <Header></Header>   
+        <section>
+            <div className={css.contact_box}>
+                <h1 className={css.section_title}>Phonebook</h1>
+                <ContactForm />
+            </div>
+            {/* <div>
+                <h2 className={css.section_title}>Contacts</h2>
+                <Filter/>
+                <ContactsList></ContactsList>
+            </div> */}
+
+        </section >
+        </div>
 
   );};

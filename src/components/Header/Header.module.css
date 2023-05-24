@@ -1,15 +1,4 @@
-.container{
-    background-color: #212123;
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
-    padding-right: 30px;
-    justify-content: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
 
-}
 
 .header{
     width: 800px;

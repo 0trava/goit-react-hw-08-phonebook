@@ -4,7 +4,7 @@ import style from './Header.module.css';
 
 const Header = () => {
   return (
-    <div className={style.container}>
+
         <div className={style.header}>
             <a href="" className={style.logo_box}>
                 <div className={style.icon}/>
@@ -24,8 +24,6 @@ const Header = () => {
             </div>
         </div>
 
-        
-    </div>
   )
 }
 
