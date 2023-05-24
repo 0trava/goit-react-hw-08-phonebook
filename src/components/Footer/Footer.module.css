@@ -16,12 +16,18 @@
  
   .rights {
     color: #808080;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 15px;
   }
   
   .rights a {
     color: white;
+  }
+
+  .rights a:hover, .rights a:focus{
+
+    color: #8B57C6;
+
   }
   
   .socials {

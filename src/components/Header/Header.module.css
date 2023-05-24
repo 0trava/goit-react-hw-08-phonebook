@@ -1,11 +1,13 @@
 
 
 .header{
-    width: calc(100% - 400px);
+    width: calc(100% - 440px);
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
     display: flex;
     justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .logo_box{
@@ -80,6 +82,7 @@
 
   .login{
     font-weight: 600;
+    font-size: 20px;
     line-height: 20px;
     color: white;
     cursor: pointer;
@@ -89,5 +92,6 @@
   .login span{
     color: #8B57C6;
     font-weight: 600;
+    font-size: 20px;
     line-height: 20px;
   }
