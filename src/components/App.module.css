@@ -12,8 +12,9 @@ body, html{
     flex-direction: column;
     padding-left: 30px;
     padding-right: 30px;
-    justify-content: center;
+    justify-content: flex-start;
     overflow: hidden;
+    height: 100vh;
 
 }
 
@@ -22,6 +23,8 @@ body, html{
     width: calc(100% - 400px);
     display: flex;
     justify-content: space-between;
+    height: 80vh;
+
 }
 
 .section_title{
@@ -40,6 +43,12 @@ body, html{
 .contact_box{
     background-color: #191919;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 6px;
+    width: calc((100vw / 2) - 16vw);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 

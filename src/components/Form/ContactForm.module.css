@@ -1,22 +1,25 @@
 .form{
-    gap: 20px;
+    /* gap: 20px; */
 
-    box-sizing: border-box;
-    width: 500px;
+    /* box-sizing: border-box; */
+    width: 75%;
     height: 350px;
-    background: rgba(217, 217, 217, 0.58);
-    border: 1px solid white;
-    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-    backdrop-filter: blur(6px);
-    border-radius: 17px;
-    padding: 30px 30px;
+
+    /* padding: 30px 30px; */
     transition: all 0.5s;
     display: flex;
+    /* flex-direction: column; */
+    /* font-weight: bolder; */
+    color: #808080;
     flex-direction: column;
-    font-weight: bolder;
-    color: black;
+    margin-top: 24px;
+    row-gap: 16px;
 
 }
+
+/* .form input {
+
+} */
 
 
 
@@ -52,7 +55,12 @@
   }
 
   .form__input{
-    border-radius: 17px;
-    padding: 10px 10px;
+    background: #212123;
+    border-radius: 8px;
+    color: #808080;
+    padding: 12px 24px;
+    /* width: 100%; */
     cursor: pointer;
+    box-shadow: none;
+    border: none;
   }

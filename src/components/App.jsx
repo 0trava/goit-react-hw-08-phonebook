@@ -22,11 +22,11 @@ export const App = () => {
                 <h1 className={css.section_title}>Phonebook</h1>
                 <ContactForm />
             </div>
-            {/* <div>
-                <h2 className={css.section_title}>Contacts</h2>
+            <div className={css.contact_box}>
+                {/* <h2 className={css.section_title}>Contacts</h2>
                 <Filter/>
-                <ContactsList></ContactsList>
-            </div> */}
+                <ContactsList></ContactsList> */}
+            </div>
 
         </section >
         </div>
