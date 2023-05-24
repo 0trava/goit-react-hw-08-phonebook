@@ -64,7 +64,7 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: var(--dark);
+    /* background: var(--dark); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -73,7 +73,7 @@
   .username {
     font-size: 16px;
     line-height: 12px;
-    color: var(--grey);
+    /* color: var(--grey); */
     margin-right: 30px;
     margin-left: 10px;
   }

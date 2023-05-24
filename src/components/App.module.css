@@ -37,14 +37,14 @@ body, html{
     /* font-weight: 600; */
     line-height: 20px;
 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .contact_box{
     background-color: #191919;
     padding: 20px;
     border-radius: 6px;
-    width: calc((100vw / 2) - 16vw);
+    width: calc((100vw / 3));
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
