@@ -5,6 +5,7 @@ import {ContactForm} from "./Form/ContactForm";
 import {ContactsList} from "./ContactsList/ContactsList";
 import {Filter} from "./Filter/Filter";
 import Header from './Header/Header';
+import Footer from './Footer/Footer';
 
 import css from "./App.module.css"; // підключення стилів
 
@@ -19,7 +20,7 @@ export const App = () => {
         <Header></Header>   
         <section className={css.body}>
             <div className={css.contact_boximg}>
-                <h1 className={css.section_title}>Phonebook</h1>
+                <h2 className={css.section_title}>Phonebook</h2>
                 <ContactForm />
             </div>
             <div className={css.contact_box}>
@@ -29,6 +30,7 @@ export const App = () => {
             </div>
 
         </section >
+        <Footer/>
         </div>
 
   );};
