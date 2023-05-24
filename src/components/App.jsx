@@ -17,7 +17,7 @@ export const App = () => {
       return (
         <div className={css.container}>
         <Header></Header>   
-        <section>
+        <section className={css.body}>
             <div className={css.contact_box}>
                 <h1 className={css.section_title}>Phonebook</h1>
                 <ContactForm />
