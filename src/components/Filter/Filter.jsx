@@ -16,14 +16,14 @@ export const Filter = () => {
 
     return (
       <div className={css.form__filter}>
-          <label htmlFor="Find">Find contacts by name</label>
+          <label htmlFor="Find"></label>
           <input
           value={filter}
           onChange={event => dispatch(setFilter(event.target.value.trim()))}
           className={css.filter__input}
           type="text"
           name="filter"
-          placeholder=''
+          placeholder="Find contacts by name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
