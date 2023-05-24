@@ -8,6 +8,7 @@ body{
     position: absolute;
     background-color: #191919;
     top: 20%;
+    left: calc(100vw / 3);
     width: 500px;
     padding: 50px;
     height: 500px;
@@ -15,7 +16,7 @@ body{
     z-index: 5;  
 }
 
-body::before{
+.body::before{
     content: "";
     position: absolute;
     z-index: 3; 

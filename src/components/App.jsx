@@ -6,7 +6,8 @@ import {ContactsList} from "./ContactsList/ContactsList";
 import {Filter} from "./Filter/Filter";
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
-import UsersForm from './Users/UsersForm';
+import UsersFormSignUp from './Users/UsersFormSignUp';
+import UsersFormSignIn from './Users/UsersFormSignIn'
 
 import css from "./App.module.css"; // підключення стилів
 
@@ -19,7 +20,8 @@ export const App = () => {
       return (
         <div className={css.container}>
         <Header></Header> 
-        <UsersForm/>  
+        {/* <UsersFormSignUp/> */}
+        {/* <UsersFormSignIn/>   */}
         <section className={css.body}>
             <div className={css.contact_boximg}>
                 <h2 className={css.section_title}>Phonebook</h2>
