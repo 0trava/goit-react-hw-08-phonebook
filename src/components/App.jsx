@@ -4,7 +4,10 @@
 import {ContactForm} from "./Form/ContactForm";
 import {ContactsList} from "./ContactsList/ContactsList";
 import {Filter} from "./Filter/Filter";
+import Header from './Header/Header';
+
 import css from "./App.module.css"; // підключення стилів
+
 
 
 
@@ -12,6 +15,8 @@ export const App = () => {
 
 // РЕНДНЕРІНГ сторінки
       return (
+        <>
+              <Header></Header>   
       <div className={css.container}>
         <h1 className={css.section_title}>Phonebook</h1>
         <ContactForm />
@@ -19,4 +24,6 @@ export const App = () => {
         <Filter/>
         <ContactsList></ContactsList>
       </div>
+        </>
+
   );};
