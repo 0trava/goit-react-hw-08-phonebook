@@ -3,9 +3,25 @@
     max-width: 100%;
     display: flex;
     align-items: center;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
     justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.header{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo_box{
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+    align-items: center;
 
 }
 
@@ -16,4 +32,69 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin-right: 10px;
 }
+
+
+.logo{
+    font-family: Montserrat, Roboto, sans-serif;
+    color: white;
+    /* font-weight: 600; */
+    line-height: 20px;
+    
+
+}
+
+.logo span{
+    color: #8B57C6;
+    font-weight: 600;
+    line-height: 20px;
+
+}
+
+
+.register_form{
+    color: #808080;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.user{
+    display: flex;
+}
+
+
+
+
+.avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--dark);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .username {
+    font-size: 12px;
+    line-height: 12px;
+    color: var(--grey);
+    margin-right: 30px;
+  }
+
+  .login{
+    font-weight: 600;
+    line-height: 20px;
+    color: white;
+    cursor: pointer;
+
+  }
+
+  .login span{
+    color: #8B57C6;
+    font-weight: 600;
+    line-height: 20px;
+  }
