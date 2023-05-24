@@ -2,7 +2,8 @@ import React from 'react';
 
 import css from './UsersForm.module.css';
 
-const UsersForm = ({closeForm}) => {
+const UsersFormSignUp = ({ toggleCurrentFormType, closeForm }) => {
+  
   return (
     <div className={css.body}>
       <div className={css.form_container}>
@@ -33,7 +34,7 @@ const UsersForm = ({closeForm}) => {
 
             <input value="Get Started" type="submit" className={css.submite}/>
 
-            <div className={css.span}>Already have an account? <span>Sign in</span></div>
+            <div className={css.span}>Already have an account? <span onClick={() => toggleCurrentFormType("signup")}>Sign in</span></div>
         </form>
       </div>
     </div>
@@ -41,4 +42,4 @@ const UsersForm = ({closeForm}) => {
   );
 }
 
-export default UsersForm;
+export default UsersFormSignUp;

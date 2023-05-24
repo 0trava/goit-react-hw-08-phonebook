@@ -1,13 +1,16 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { toggleForm } from '../../redux/user/userSlice';
+import { toggleForm, toggleFormType } from '../../redux/user/userSlice';
 
 import style from './Header.module.css';
 
 const Header = () => {
     const dispatch = useDispatch();
 
-    const openForm = () => dispatch(toggleForm(true));
+    const openForm = () => {
+        dispatch(toggleFormType("signup"));
+        dispatch(toggleForm(true));
+    } 
 
   return (
 
