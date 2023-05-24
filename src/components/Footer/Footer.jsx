@@ -1,24 +1,24 @@
 import React from 'react';
 // import {Link} from "react-router-dom";
 
-import styles from './Footer.module.css';
+import css from './Footer.module.css';
 // import { ROUTES } from '../../utils/routes';
 
 function Footer() {
   return (
-    <section className={styles.footer}>
+    <section className={css.footer}>
         <div>
-            <a href="" className={styles.logo_box}>
-                <p className={styles.logo}> <span>C</span>ONTACT <span>B</span>OOK</p>
+            <a href="/" className={css.logo_box}>
+                <p className={css.logo}> <span>C</span>ONTACT <span>B</span>OOK</p>
             </a>
         </div>
-        <div className={styles.rights}>Developed by {""}
+        <div className={css.rights}>Developed by {""}
         <a href="https://github.com/0trava"
            target='_blank'
            rel="noreferrer"
            >0trava</a>
         </div>
-        <div className={styles.socials}>
+        <div className={css.socials}>
             <a href="https://www.instagram.com" target='_blank' rel="noreferrer">                
                 <svg  className="icon">
                 <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#instagram`}></use>
@@ -39,4 +39,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default Footer;
