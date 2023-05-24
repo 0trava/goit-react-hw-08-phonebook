@@ -21,7 +21,7 @@ body, html{
 
 .body{
     margin-top: 30px;
-    width: calc(100% - 400px);
+    width: calc(100% - 20vw);
     display: flex;
     justify-content: space-between;
     height: 80vh;

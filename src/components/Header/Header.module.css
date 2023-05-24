@@ -1,7 +1,7 @@
 
 
 .header{
-    width: calc(100% - 440px);
+    width: calc(100% - 22vw);
     padding-top: 5px;
     padding-bottom: 0px;
     display: flex;
