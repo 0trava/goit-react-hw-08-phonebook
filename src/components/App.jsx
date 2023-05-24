@@ -23,9 +23,9 @@ export const App = () => {
                 <ContactForm />
             </div>
             <div className={css.contact_box}>
-                {/* <h2 className={css.section_title}>Contacts</h2>
+                <h2 className={css.section_title}>Contacts</h2>
                 <Filter/>
-                <ContactsList></ContactsList> */}
+                <ContactsList></ContactsList>
             </div>
 
         </section >

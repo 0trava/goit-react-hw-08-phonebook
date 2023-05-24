@@ -6,6 +6,11 @@
     margin-right: 15px;
     margin-left: 15px;
     min-width: 140px;
+    font-family: Montserrat, Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #afaeae;
 }
 
 
@@ -19,29 +24,27 @@
 
 .contacts__btn{
     max-width: 200px;
-    height: 30px;
-    padding: 0px 20px;
-    text-transform: uppercase;
+    background: #6c3eb8;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 9px 20px;
     border-radius: 17px;
-    font-size: 17px;
-    font-weight: 500;
-    color: #06060680;
-    text-shadow: none;
-    background: transparent;
-    box-shadow: transparent;
-    border: 1px solid #06060680;
     transition: 0.5s ease;
+    border: none;
+    color: #fff;
+    font-family: Montserrat,Roboto,sans-serif;
+    font-size: 16px;
 }
 
 .contacts__btn:hover, .contacts__btn:focus {
-    color: #ffffff;
-    background: #008cff;
-    border: 1px solid #008cff;
+    color: #8B57C6;
+    background: #8B57C6;
+    /* border: 1px solid #8B57C6; */
     text-shadow: 0 0 5px #ffffff,
                 0 0 10px #ffffff,
                 0 0 20px #ffffff;
-    box-shadow: 0 0 5px #008cff,
-                0 0 20px #008cff,
-                0 0 50px #008cff,
-                0 0 100px #008cff;
+    box-shadow: 0 0 5px #8B57C6,
+                0 0 20px #8B57C6,
+                0 0 50px #8B57C6,
+                0 0 100px #8B57C6;
   }
