@@ -16,6 +16,7 @@ body, html{
     overflow: hidden;
     height: 100vh;
 
+
 }
 
 .body{
@@ -25,7 +26,11 @@ body, html{
     justify-content: space-between;
     height: 80vh;
 
+
+
 }
+
+
 
 .section_title{
     display: flex;
@@ -50,5 +55,22 @@ body, html{
     flex-direction: column;
     align-content: center;
     align-items: center;
+    /* position: relative; */
+
+
+}
+
+.contact_boximg{
+    background-color: #191919;
+    padding: 20px;
+    border-radius: 6px;
+    width: calc((100vw / 3));
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background-image: url(../../public/fon_image.png);
+
 }
 
