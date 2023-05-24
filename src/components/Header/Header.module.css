@@ -63,6 +63,7 @@
 
 .user{
     display: flex;
+    align-items: center;
 }
 
 
@@ -79,10 +80,11 @@
   }
 
   .username {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 12px;
     color: var(--grey);
     margin-right: 30px;
+    margin-left: 10px;
   }
 
   .login{

@@ -15,8 +15,8 @@ const Header = () => {
 
             <div className={style.register_form}>
                 <div className={style.user}>
-                    <div className={style.avatar}></div>
-                    <p className={style.username}>Hello, Sveta</p>
+                    <img  className={style.avatar} src="https://user-life.com/uploads/posts/2020-03/1584366922_1.png" alt="" />
+                    <p className={style.username}>Svetlana</p>
                 </div>
 
                 <div className={style.login}>Log <span>In</span> </div>
