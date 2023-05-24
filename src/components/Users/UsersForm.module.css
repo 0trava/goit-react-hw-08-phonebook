@@ -127,8 +127,9 @@ body{
     color: var(--bg-dark);
   }
   
-  .span a {
+  .span span {
     color: var(--clr);
+    cursor: pointer;
   }
 
   .close {

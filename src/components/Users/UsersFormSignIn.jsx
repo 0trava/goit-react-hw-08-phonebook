@@ -25,7 +25,7 @@ const UsersForm = () => {
 
             <input value="Log in" type="submit" className={css.submite}/>
 
-            <span className={css.span}>Don't have an account? <a href="#">Sign up</a></span>
+            <div className={css.span}>Don't have an account? <span>Sign up</span></div>
         </form>
     </div>
     </div>

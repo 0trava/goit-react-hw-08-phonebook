@@ -33,7 +33,7 @@ const UsersForm = () => {
 
             <input value="Get Started" type="submit" className={css.submite}/>
 
-            <span className={css.span}>Already have an account? <a href="">Sign in</a></span>
+            <div className={css.span}>Already have an account? <span>Sign in</span></div>
         </form>
       </div>
     </div>
