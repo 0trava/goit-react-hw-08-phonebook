@@ -2,11 +2,11 @@ import React from 'react';
 
 import css from './UsersForm.module.css';
 
-const UsersForm = () => {
+const UsersForm = ({closeForm}) => {
   return (
     <div className={css.body}>
       <div className={css.form_container}>
-          <div className={css.close} onClick={()=> {}}>
+          <div className={css.close} onClick={closeForm}>
             <svg>
               <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#close`} />
             </svg>

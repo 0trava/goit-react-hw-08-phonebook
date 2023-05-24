@@ -1,8 +1,14 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { toggleForm } from '../../redux/user/userSlice';
 
 import style from './Header.module.css';
 
 const Header = () => {
+    const dispatch = useDispatch();
+
+    const openForm = () => dispatch(toggleForm(true));
+
   return (
 
         <div className={style.header}>
@@ -19,7 +25,7 @@ const Header = () => {
                     <p className={style.username}>Svetlana</p>
                 </div>
 
-                <div className={style.login}>Log <span>In</span> </div>
+                <div className={style.login} onClick={openForm}>Log <span>In</span> </div>
                 {/* <div className={style.login}>Log <span>Out</span></div> */}
             </div>
         </div>
