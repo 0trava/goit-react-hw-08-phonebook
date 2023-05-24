@@ -6,6 +6,7 @@ import {ContactsList} from "./ContactsList/ContactsList";
 import {Filter} from "./Filter/Filter";
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
+import UsersForm from './Users/UsersForm';
 
 import css from "./App.module.css"; // підключення стилів
 
@@ -17,7 +18,8 @@ export const App = () => {
 // РЕНДНЕРІНГ сторінки
       return (
         <div className={css.container}>
-        <Header></Header>   
+        <Header></Header> 
+        <UsersForm/>  
         <section className={css.body}>
             <div className={css.contact_boximg}>
                 <h2 className={css.section_title}>Phonebook</h2>
