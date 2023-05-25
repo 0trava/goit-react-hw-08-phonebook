@@ -67,7 +67,9 @@ body{
   }
   
   form input[type="email"],
-  form input[type="password"] {
+  form input[type="password"],
+  form input[type="text"]
+   {
     border-radius: 0.5rem;
     padding: 1rem 0.75rem;
     width: 100%;
@@ -80,7 +82,9 @@ body{
   }
   
   form input[type="email"]:focus,
-  form input[type="password"]:focus {
+  form input[type="password"]:focus,
+  form input[type="text"]:focus,
+   {
     outline: 2px solid var(--clr);
   }
   

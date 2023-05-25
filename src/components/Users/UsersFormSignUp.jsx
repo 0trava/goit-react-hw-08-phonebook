@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+
+import {registerUser} from "../../redux/operetions";
 
 import css from './UsersForm.module.css';
 
+
+
 const UsersFormSignUp = ({ toggleCurrentFormType, closeForm }) => {
-  
+   const dispatch = useDispatch();
+   const [name, setName] = useState('');
+   const [email, setEmail] = useState('');
+   const [password, setPassword] = useState('');
+
+  const hadleChange = ({ target: { name, value }}) => {
+    if (name === "name") {setName(value);}
+    if (name === "email") {setEmail(value);}
+    if (name === "password") {setPassword(value);}
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(registerUser({name, email, password}))
+    // setName('');
+    // setEmail('');
+    // setPassword('');
+    console.log("finish");
+  }
+
   return (
     <div className={css.body}>
       <div className={css.form_container}>
@@ -13,22 +37,22 @@ const UsersFormSignUp = ({ toggleCurrentFormType, closeForm }) => {
             </svg>
           </div>
         
-        <form className={css.form}>
+        <form className={css.form} onSubmit={handleSubmit}>
             <h2 className={css.title}>Create Account</h2>
 
-            <div className={css.input_span}>
-            <label className={css.label} for="email">User name</label>
-            <input id="email" name="email" type="email"/>
-            </div>
+            <span className={css.input_span}>
+            <label className={css.label} for="name">Name</label>
+            <input id="name" name="name" type="text" onChange={hadleChange}/>
+            </span>
 
-            <div className={css.input_span}>
+            <span className={css.input_span}>
             <label className={css.label} for="email">Email</label>
-            <input id="email" name="email" type="email"/>
-            </div>
+            <input id="email" name="email" type="email" onChange={hadleChange}/>
+            </span>
 
             <span  className={css.input_span}>
             <label  className={css.label} for="password">Password</label>
-            <input id="password" name="password" type="password"/></span>
+            <input id="password" name="password" type="password" onChange={hadleChange}/></span>
 
             
 
