@@ -1,0 +1,36 @@
+.background{
+    background-image: url(https://www.tapsmart.com/wp-content/uploads/2018/07/contacts-app-header-1024x512.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+    position: relative;
+}
+
+.title{
+    position: absolute;
+    /* width: 100%; */
+    font-family: Montserrat, Roboto, sans-serif;
+    color: white;
+    font-size: 62px;
+    margin: 40px;
+    top: 30%;
+    left: 20%;
+
+
+
+
+}
+
+.post_title{
+    position: absolute;
+    /* width: 100%; */
+    font-family: Montserrat, Roboto, sans-serif;
+    color: white;
+    font-size: 40px;
+    margin: 40px;
+    top: 50%;
+    left: 23%;
+}
