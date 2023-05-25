@@ -9,8 +9,21 @@
     padding-left: 20px;
     padding-right: 20px;
 }
+.contacts__navigate{
+    display: flex;
+    gap: 30px
+
+}
 
 .logo_box{
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+    align-items: center;
+
+}
+
+.logo_box2{
     display: flex;
     text-decoration: none;
     cursor: pointer;
