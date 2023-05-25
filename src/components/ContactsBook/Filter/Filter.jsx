@@ -3,7 +3,7 @@ import css from "./Filter.module.css"; // підключення стилів н
 
 // Імпортуємо хук
 import { useDispatch, useSelector } from "react-redux";
-import { setFilter } from "../../redux/filterContacts";
+import { setFilter } from "../../../redux/filterContacts";
 import { getStatusFilter } from 'redux/selectors';
 
 export const Filter = () => {

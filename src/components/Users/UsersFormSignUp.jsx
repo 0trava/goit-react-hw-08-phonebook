@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import {registerUser} from "../../redux/operetions";
@@ -22,9 +22,9 @@ const UsersFormSignUp = ({ toggleCurrentFormType, closeForm }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(registerUser({name, email, password}))
-    // setName('');
-    // setEmail('');
-    // setPassword('');
+    setName('');
+    setEmail('');
+    setPassword('');
     console.log("finish");
   }
 
@@ -42,17 +42,28 @@ const UsersFormSignUp = ({ toggleCurrentFormType, closeForm }) => {
 
             <span className={css.input_span}>
             <label className={css.label} for="name">Name</label>
-            <input id="name" name="name" type="text" onChange={hadleChange}/>
+            <input id="name" name="name" type="text" onChange={hadleChange} value={name} autoComplete='off'/>
             </span>
 
             <span className={css.input_span}>
             <label className={css.label} for="email">Email</label>
-            <input id="email" name="email" type="email" onChange={hadleChange}/>
+            <input id="email" name="email" type="email" 
+            onChange={hadleChange} 
+            value={email} 
+            autoComplete='off'
+            title="Example of valid email address: qwerty1@example.com"            
+            />
             </span>
 
             <span  className={css.input_span}>
             <label  className={css.label} for="password">Password</label>
-            <input id="password" name="password" type="password" onChange={hadleChange}/></span>
+            <input id="password" name="password" type="password" 
+            onChange={hadleChange} 
+            value={password} 
+            autoComplete='off' 
+            pattern="[0-9a-fA-F]{7,12}"
+            title="Password should contains at least 7 symbols"
+            /></span>
 
             
 

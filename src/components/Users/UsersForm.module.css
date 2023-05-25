@@ -83,7 +83,7 @@ body{
   
   form input[type="email"]:focus,
   form input[type="password"]:focus,
-  form input[type="text"]:focus,
+  form input[type="text"]:focus
    {
     outline: 2px solid var(--clr);
   }

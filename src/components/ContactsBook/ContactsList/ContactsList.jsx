@@ -3,8 +3,8 @@ import css from "./ContactsList.module.css"; // підключення стил�
 import Loader from 'components/Loader/Loader'; // підключення Loadera
 
 import { useDispatch, useSelector } from "react-redux";
-import { getIsLoading, getFilteredContacts  } from "../../redux/selectors";
-import { fetchContacts, deleteContact } from "../../redux/operetions";
+import { getIsLoading, getFilteredContacts  } from "../../../redux/selectors";
+import { fetchContacts, deleteContact } from "../../../redux/operetions";
 import { useEffect } from 'react';
 
 export const ContactsList = () =>{

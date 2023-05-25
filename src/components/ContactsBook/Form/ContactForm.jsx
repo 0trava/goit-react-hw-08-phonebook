@@ -4,8 +4,8 @@ import {useState} from 'react'; // пакети для роботи зі ста�
 
 // Імпортуємо хук
 import { useSelector, useDispatch } from "react-redux";
-import { addContact } from "../../redux/operetions";
-import { getContacts } from "../../redux/selectors";
+import { addContact } from "../../../redux/operetions";
+import { getContacts } from "../../../redux/selectors";
 
 
 export const ContactForm =()=> {
