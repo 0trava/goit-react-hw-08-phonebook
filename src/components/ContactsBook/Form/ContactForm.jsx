@@ -1,5 +1,4 @@
 import css from "./ContactForm.module.css"; // підключення стилів на картку
-import { nanoid } from 'nanoid';
 import {useState} from 'react'; // пакети для роботи зі станом
 
 // Імпортуємо хук
@@ -32,9 +31,8 @@ export const ContactForm =()=> {
             alert(`${name} is alredy in contacts`); // якщо є, то виводимо повідомлення
       } else {
             const contact = {
-              id: nanoid(),
               name: name,
-              phone: number,
+              number: number,
             };
             dispatch(addContact( contact )); // ADD CONTACT - зберігаємо
       }

@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchContacts, addContact, deleteContact, registerUser, logInUser, logOutUser } from "../redux/operetions";
+// const USER = 'contacts'; // ключ для localStorage
+
 
 const initialState = {
-
   currentUser: '',
   token: '',
   isLogin: false,
@@ -13,6 +14,9 @@ const initialState = {
   isLoading: false,
   error: null,
 };
+
+// const startWork = (JSON.parse(window.localStorage.getItem(USER)) ?? initialState); // якщо в localStorage є контакти, то використовуємо їх, якщо ні, то використовуємо початковий масив
+
 
 const handlePending = state => {
   return {...state, isLoading: true, };
@@ -57,13 +61,7 @@ const handleLoginUserSuccess = (state, action) => {
 };
 
 export const handlelogOutUser = state => {
-  return { ...state, 
-    isLoading: false, 
-    error: null,
-    currentUser: '',
-    token: '',
-    isLogin: false,
-  };
+  return state = initialState;
 };
 
 // для кожного з цих екшенів буде створено actionCreator
