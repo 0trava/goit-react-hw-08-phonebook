@@ -5,6 +5,7 @@ const initialState = {
 
   currentUser: null,
   token: null,
+  isLogin: false,
   items: [],
   // contacts: [],
   formType: "signup",
@@ -35,7 +36,17 @@ const handleDeleteContactSuccess = (state, action) => {
 
 
 const handleAddUserSuccess = (state, action) => {
-  return { ...state, isLoading: false, error: null,};
+  return { ...state, 
+    isLoading: false, 
+    error: null,
+    currentUser: action.payload.user,
+    token: action.payload.token,
+    isLogin: true,
+  };
+  // state.user = action.payload.user;
+  // state.token = action.payload.token;
+  // state.isLogin = true,
+
 };
 
 // для кожного з цих екшенів буде створено actionCreator
@@ -53,7 +64,7 @@ const contactsSlice = createSlice({
     [fetchContacts.fulfilled]: handleFetchContactsSuccess,
     [addContact.fulfilled]: handleAddContactSuccess,
     [deleteContact.fulfilled]: handleDeleteContactSuccess,
-    [registerUser.pending]: handleAddUserSuccess,
+    [registerUser.fulfilled]: handleAddUserSuccess,
   },
 });
 
