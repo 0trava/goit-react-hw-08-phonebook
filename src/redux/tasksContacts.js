@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchContacts, addContact, deleteContact, registerUser, logInUser, logOutUser } from "../redux/operetions";
+import { fetchContacts, addContact, deleteContact, registerUser, logInUser, logOutUser, fetchCurrentUser } from "../redux/operetions";
 // const USER = 'contacts'; // ключ для localStorage
 
 
@@ -49,6 +49,16 @@ const handleAddUserSuccess = (state, action) => {
   };
 };
 
+const handleCurrentUserSuccess = (state, action) => {
+  return { ...state, 
+    isLoading: false, 
+    error: null,
+    currentUser: action.payload,
+    isLogin: true,
+  };
+};
+
+
 
 const handleLoginUserSuccess = (state, action) => {
   return { ...state, 
@@ -83,6 +93,7 @@ const contactsSlice = createSlice({
     [logInUser.fulfilled]: handleLoginUserSuccess,
     [logInUser.rejected]: handleRejected,
     [logOutUser.fulfilled]: handlelogOutUser,
+    [fetchCurrentUser.fulfilled]: handleCurrentUserSuccess,
   },
 });
 

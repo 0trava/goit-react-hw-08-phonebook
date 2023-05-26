@@ -21,8 +21,30 @@ const token = {
 };
 
 
+export const fetchCurrentUser = createAsyncThunk(
+  'user/refresh', 
+  async (_, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const gettoken = state.contacts.token;
+
+    if (gettoken === '') {
+      return console.log("token is empty");
+    } else {
+      console.log(gettoken);
+      token.set(gettoken);
+      try {
+        const {data} = await axios.get('/users/current');
+        console.log(data);
+        return data;
+        } catch (error) {
+          alert("error");
+        }
+    }
+});
+
+
 export const registerUser = createAsyncThunk(
-  'auth/register', 
+  'user/register', 
   async credentials => {
   try {
       const {data} = await axios.post('/users/signup', credentials);
@@ -34,7 +56,7 @@ export const registerUser = createAsyncThunk(
 });
 
 export const logInUser = createAsyncThunk(
-  'auth/login', 
+  'user/login', 
   async credentials => {
   try {
       const {data} = await axios.post('/users/login', credentials);
@@ -47,7 +69,7 @@ export const logInUser = createAsyncThunk(
 });
 
 export const logOutUser = createAsyncThunk(
-  'auth/logout', 
+  'user/logout', 
   async () => {
   try {
       await axios.post('/users/logout');
