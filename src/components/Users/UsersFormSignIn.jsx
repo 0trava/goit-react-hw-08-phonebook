@@ -1,9 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
+// import { useDispatch } from 'react-redux';
 
 import css from './UsersForm.module.css';
 
 
 const UsersFormSignIn = ({ toggleCurrentFormType, closeForm }) => {
+  // const dispatch = useDispatch();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+ const hadleChange = ({ target: { name, value }}) => {
+   if (name === "password") {setPassword(value);}
+   if (name === "email") {setEmail(value);}
+ }
+
+ const handleSubmit = (e) => {
+   e.preventDefault();
+
+   if (password && email) {
+    //  dispatch(registerUser({name, email, password}))
+     setPassword('');
+     setEmail('');
+     closeForm();
+   } else {
+     alert("All fields must be filled");
+   }
+
+
+ }
+
 
   return (
 <div className={css.body}>
@@ -14,17 +39,28 @@ const UsersFormSignIn = ({ toggleCurrentFormType, closeForm }) => {
             </svg>
           </div>
         
-        <form className={css.form}>
+        <form className={css.form} onSubmit={handleSubmit}>
             <h2 className={css.title}>Login to your Account</h2>
 
             <div className={css.input_span}>
             <label className={css.label} for="email">Email</label>
-            <input id="email" name="email" type="email"/>
+            <input id="email" name="email" type="email"
+                        onChange={hadleChange} 
+                        value={email} 
+                        autoComplete='off'
+                        title="Example of valid email address: qwerty1@example.com"
+                        />
             </div>
 
             <span  className={css.input_span}>
             <label  className={css.label} for="password">Password</label>
-            <input id="password" name="password" type="password"/></span>
+            <input id="password" name="password" type="password" 
+            onChange={hadleChange} 
+            value={password} 
+            autoComplete='off' 
+            pattern="[0-9a-fA-F]{7,12}"
+            title="Password should contains at least 7 symbols"
+            /></span>
 
             
 

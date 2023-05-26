@@ -21,11 +21,18 @@ const UsersFormSignUp = ({ toggleCurrentFormType, closeForm }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(registerUser({name, email, password}))
-    setName('');
-    setEmail('');
-    setPassword('');
-    console.log("finish");
+
+    if (name && email && password) {
+      dispatch(registerUser({name, email, password}))
+      setName('');
+      setEmail('');
+      setPassword('');
+      closeForm();
+    } else {
+      alert("All fields must be filled");
+    }
+
+
   }
 
   return (
@@ -42,7 +49,13 @@ const UsersFormSignUp = ({ toggleCurrentFormType, closeForm }) => {
 
             <span className={css.input_span}>
             <label className={css.label} for="name">Name</label>
-            <input id="name" name="name" type="text" onChange={hadleChange} value={name} autoComplete='off'/>
+            <input id="name" name="name" type="text" 
+            onChange={hadleChange} 
+            value={name} 
+            autoComplete='off'
+            pattern="[A-Za-z]{7,25}"
+            title="How you want that I name you" 
+            />
             </span>
 
             <span className={css.input_span}>
