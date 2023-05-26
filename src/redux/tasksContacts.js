@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchContacts, addContact, deleteContact, registerUser } from "../redux/operetions";
+import { fetchContacts, addContact, deleteContact, registerUser, logInUser, logOutUser } from "../redux/operetions";
 
 const initialState = {
 
-  currentUser: null,
-  token: null,
+  currentUser: '',
+  token: '',
   isLogin: false,
   items: [],
   // contacts: [],
@@ -43,10 +43,27 @@ const handleAddUserSuccess = (state, action) => {
     token: action.payload.token,
     isLogin: true,
   };
-  // state.user = action.payload.user;
-  // state.token = action.payload.token;
-  // state.isLogin = true,
+};
 
+
+const handleLoginUserSuccess = (state, action) => {
+  return { ...state, 
+    isLoading: false, 
+    error: null,
+    currentUser: action.payload.user,
+    token: action.payload.token,
+    isLogin: true,
+  };
+};
+
+export const handlelogOutUser = state => {
+  return { ...state, 
+    isLoading: false, 
+    error: null,
+    currentUser: '',
+    token: '',
+    isLogin: false,
+  };
 };
 
 // для кожного з цих екшенів буде створено actionCreator
@@ -65,6 +82,9 @@ const contactsSlice = createSlice({
     [addContact.fulfilled]: handleAddContactSuccess,
     [deleteContact.fulfilled]: handleDeleteContactSuccess,
     [registerUser.fulfilled]: handleAddUserSuccess,
+    [logInUser.fulfilled]: handleLoginUserSuccess,
+    [logInUser.rejected]: handleRejected,
+    [logOutUser.fulfilled]: handlelogOutUser,
   },
 });
 

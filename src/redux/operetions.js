@@ -11,12 +11,31 @@ export const registerUser = createAsyncThunk(
   'auth/register', 
   async credentials => {
   try {
-      console.log(credentials);
       const {data} = await axios.post('/users/signup', credentials);
-      console.log(data);
       return data;
   } catch (error) {
-      console.log(error);
+    alert("try one more time...");
+  }
+});
+
+export const logInUser = createAsyncThunk(
+  'auth/login', 
+  async credentials => {
+  try {
+      const {data} = await axios.post('/users/login', credentials);
+      return data;
+  } catch (error) {
+    alert("Wrong login or password...");
+  }
+});
+
+export const logOutUser = createAsyncThunk(
+  'auth/logout', 
+  async () => {
+  try {
+      await axios.post('/users/logout');
+  } catch (error) {
+    console.log("error");
   }
 });
 
@@ -58,6 +77,10 @@ export const fetchContacts = createAsyncThunk(
       }
     }
   );
+
+
+
+
 
   
 

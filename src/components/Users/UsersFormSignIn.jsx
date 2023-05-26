@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+
 
 import css from './UsersForm.module.css';
+import {logInUser} from "../../redux/operetions";
 
 
 const UsersFormSignIn = ({ toggleCurrentFormType, closeForm }) => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -18,15 +20,13 @@ const UsersFormSignIn = ({ toggleCurrentFormType, closeForm }) => {
    e.preventDefault();
 
    if (password && email) {
-    //  dispatch(registerUser({name, email, password}))
+     dispatch(logInUser({email, password}))
      setPassword('');
      setEmail('');
      closeForm();
    } else {
      alert("All fields must be filled");
    }
-
-
  }
 
 

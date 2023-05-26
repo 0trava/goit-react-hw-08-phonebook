@@ -15,9 +15,10 @@
     font-family: Montserrat, Roboto, sans-serif;
     color: white;
     font-size: 62px;
-    margin: 40px;
-    top: 30%;
-    left: 25vw;
+    margin-left: 0vw;
+    top: 27%;
+    left: calc(100vw/5);
+    width: 70vw;
 
 
 
@@ -30,7 +31,8 @@
     font-family: Montserrat, Roboto, sans-serif;
     color: white;
     font-size: 40px;
-    margin: 40px;
+    margin-left: 0vw;
     top: 60%;
-    left: 28vw;
+    left: calc(100vw/5);
+    width: 60vw;
 }
