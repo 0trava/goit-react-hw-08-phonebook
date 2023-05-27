@@ -11,7 +11,7 @@ import {PrivateRoute} from "./PrivateRoute";
 
 const AppRoutes = () => (
   <Routes>
-    <Route path={ROUTES.HOME} index element={<Home />} />
+    <Route path="/" index element={<Home />} />
     <Route path={ROUTES.CONTACTS} element={
       <PrivateRoute><ContactsBook/></PrivateRoute>
     } />
