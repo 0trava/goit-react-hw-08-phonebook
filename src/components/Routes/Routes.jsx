@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { ROUTES } from "../Utils/routes";
+// import { ROUTES } from "../Utils/routes";
 
 
 import Home from "../Home/Home";
@@ -9,14 +9,17 @@ import PrivateRoute from "./PrivateRoute";
 
 
 
-const AppRoutes = () => (
+const AppRoutes = () => {
+  return (
+    <>
   <Routes>
-    <Route path="/" index element={<Home />} />
-    <Route path={ROUTES.CONTACTS} element={
-      <PrivateRoute><ContactsBook/></PrivateRoute>
-    } />
+      <Route path="/" index element={<Home />}/>
+      <Route path="/contacts" element={<PrivateRoute><ContactsBook/></PrivateRoute>} />
+      <Route path="*" element={<Home />}/>
+
 
   </Routes>
-);
+  </>)
+};
 
 export default AppRoutes;
