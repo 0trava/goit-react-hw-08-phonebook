@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import css from "./Filter.module.css"; // підключення стилів на картку
 
 // Імпортуємо хук
@@ -38,7 +38,7 @@ export const Filter = () => {
   }
   
 
-Filter.propTypes = {
-  filter: PropTypes.string.isRequired, // рядок
-  handleChange: PropTypes.func.isRequired // функція
-};
+// Filter.propTypes = {
+//   filter: PropTypes.string.isRequired, // рядок
+//   handleChange: PropTypes.func.isRequired // функція
+// };

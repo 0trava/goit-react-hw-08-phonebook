@@ -29,7 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </Provider>
     
   </React.StrictMode>,
-  document.getElementById('root')
+  // document.getElementById('root')
 );
 
 
