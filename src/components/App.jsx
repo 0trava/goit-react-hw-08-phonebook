@@ -26,7 +26,7 @@ export const App = () => {
         <Header/> 
         <UserForm/>
         <section className={css.body}>
-            <AppRoutes />
+            <AppRoutes/>
         </section >
         <Footer/>
         </div>

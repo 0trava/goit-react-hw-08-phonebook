@@ -9,7 +9,7 @@ import ContactsBook from "../ContactsBook/ContactsBook";
 
 const AppRoutes = () => (
   <Routes>
-    <Route index element={<Home />} />
+    <Route path={ROUTES.HOME} index element={<Home />} />
     <Route path={ROUTES.CONTACTS} element={<ContactsBook />} />
   </Routes>
 );
