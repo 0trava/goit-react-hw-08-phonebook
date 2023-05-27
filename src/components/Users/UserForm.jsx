@@ -4,12 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import css from './UsersForm.module.css';
 import UsersFormSignUp from './UsersFormSignUp';
 import UsersFormSignIn from './UsersFormSignIn';
-import { toggleForm, toggleFormType } from '../../redux/user/userSlice';
+import { toggleForm, toggleFormType } from '../../redux/Login form/form';
 
 
 const UserForm = () => {
     const dispatch = useDispatch();
-    const { showForm, formType } = useSelector(({ user }) => user);
+    const { showForm, formType } = useSelector(({ form }) => form);
 
     const closeForm = () => dispatch(toggleForm(false));
     const toggleCurrentFormType = (type) => dispatch(toggleFormType(type));

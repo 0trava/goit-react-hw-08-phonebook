@@ -20,7 +20,7 @@ const token = {
   },
 };
 
-
+// USER - адміністрування
 export const fetchCurrentUser = createAsyncThunk(
   'user/refresh', 
   async (_, thunkAPI) => {
@@ -28,7 +28,6 @@ export const fetchCurrentUser = createAsyncThunk(
     const gettoken = state.contacts.token;
 
     if (gettoken === '') {
-      return console.log(gettoken);
     } else {
       token.set(gettoken);
       try {
@@ -70,15 +69,22 @@ export const logOutUser = createAsyncThunk(
   'user/logout', 
   async () => {
   try {
+      // ПОВЕРТАЄМО НА ГОЛОВНУ СТОРІНКУ
+      
+
+
+
+
       await axios.post('/users/logout');
       token.unset();// Удаляємо токен для всім наступних запитів в axios
+
   } catch (error) {
     console.log("error");
   }
 });
 
 
-
+// CONTACTS BOOK - адміністрування
 export const fetchContacts = createAsyncThunk(
     'contacts/fetchAll',
     async (_, thunkAPI) => {
@@ -107,7 +113,6 @@ export const fetchContacts = createAsyncThunk(
     'contacts/deleteContact',
     async (contactId, thunkAPI) => {
       try {
-        console.log(contactId);
         const response = await axios.delete(`/contacts/${contactId}`); // видаляємо контакт з бази
         return response.data;
       } catch (error) {
@@ -115,6 +120,9 @@ export const fetchContacts = createAsyncThunk(
       }
     }
   );
+
+
+
 
 
 

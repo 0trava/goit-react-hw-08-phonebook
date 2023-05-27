@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleForm, toggleFormType } from '../../redux/user/userSlice';
+import { toggleForm, toggleFormType } from '../../redux/Login form/form';
 import { getUserLogin, getUser } from "../../redux/selectors";
 import {logOutUser} from '../../redux/operetions';
 
@@ -10,9 +10,6 @@ const Header = () => {
     const dispatch = useDispatch();
     const checkIsUserLogin = useSelector(getUserLogin);
     const user = useSelector(getUser);
-
-    console.log(checkIsUserLogin);
-    console.log(user);
 
     const openForm = () => {
         dispatch(toggleFormType("signup"));

@@ -47,9 +47,6 @@ const handleAddUserSuccess = (state, action) => {
 };
 
 
-
-
-
 const handleLoginUserSuccess = (state, action) => {
   return { ...state, 
     isLoading: false, 
@@ -61,7 +58,6 @@ const handleLoginUserSuccess = (state, action) => {
 };
 
 export const handlelogOutUser = state => {
-
   return { ...state, 
     isLoading: false, 
     error: null,
@@ -72,7 +68,6 @@ export const handlelogOutUser = state => {
 };
 
 const handleCurrentUserSuccess = (state, action) => {
-  console.log(action);
   if (action.payload) {
     return { ...state, 
       isLoading: false, 
@@ -84,10 +79,12 @@ const handleCurrentUserSuccess = (state, action) => {
 
 };
 
+
 // для кожного з цих екшенів буде створено actionCreator
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState,
+
   extraReducers: {
     [fetchContacts.pending]: handlePending,
     [registerUser.pending]: handlePending,
