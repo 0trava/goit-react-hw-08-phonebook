@@ -25,7 +25,7 @@ export const ContactsList = () =>{
                 return (<li>
                    <img   className={css.avatar} src="https://user-life.com/uploads/posts/2020-03/1584366922_1.png" alt="avatar" width="30px" />
                    <p className={css.contacts__text_name}>{contact.name}</p>
-                   <p className={css.contacts__text}>{contact.number}</p> 
+                   <p className={css.contacts__number}>{contact.number}</p> 
                    <button onClick={e => dispatch(deleteContact(e.currentTarget.id))} id = {contact.id} className={css.contacts__btn} type="button">Delete</button>
                 </li>)
                 })}
