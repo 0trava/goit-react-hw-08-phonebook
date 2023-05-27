@@ -5,17 +5,17 @@ import { ROUTES } from "../Utils/routes";
 
 import Home from "../Home/Home";
 import ContactsBook from "../ContactsBook/ContactsBook";
-// import {PrivateRoute} from "./PrivateRoute";
+import {PrivateRoute} from "./PrivateRoute";
 
 
 
 const AppRoutes = () => (
   <Routes>
     <Route path={ROUTES.HOME} index element={<Home />} />
-    {/* <Route path={ROUTES.CONTACTS} element={
+    <Route path={ROUTES.CONTACTS} element={
       <PrivateRoute component= {<ContactsBook/>}/>
-    } /> */}
-        <Route path={ROUTES.CONTACTS} element={<ContactsBook/>}/>
+    } />
+    {/* <Route path={ROUTES.CONTACTS} element={<ContactsBook/>}/> */}
 
   </Routes>
 );

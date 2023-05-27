@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-
+const LOG_IN = 'checkLogIn';
 
 // axios.defaults.baseURL = 'https://646521639c09d77a62e49d07.mockapi.io/contacts';
 // персональний mock-сервер
@@ -13,11 +13,12 @@ axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 const token = {
   set(token) {
     axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+    window.localStorage.setItem(LOG_IN, 'true');
 
   },
   unset(){
     axios.defaults.headers.common.Authorization = '';
-
+    window.localStorage.setItem(LOG_IN, 'false');
   },
 };
 
@@ -33,7 +34,6 @@ export const fetchCurrentUser = createAsyncThunk(
       token.set(gettoken);
       try {
         const {data} = await axios.get('/users/current');
-        console.log(data);
         return data;
         } catch (error) {
         }

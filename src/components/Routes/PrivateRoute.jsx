@@ -1,13 +1,21 @@
-import { useSelector } from 'react-redux';
-import { getUserLogin } from 'redux/selectors';
 import { Navigate } from 'react-router-dom';
 
-export const PrivateRoute =  ({ component: Component, redirectTo = '/' }) => {
-    const UserLogin = useSelector(getUserLogin);
 
+export const PrivateRoute =  ({ component: Component}) => {
 
-        console.log( UserLogin );
-        return UserLogin ? <Navigate to={redirectTo} /> : Component;
+    const UserLogin = window.localStorage.getItem('checkLogIn');
+    console.log(UserLogin);
+
+    if (UserLogin) {
+        console.log("Load");
+        return Component;
+
+    } else {
+        console.log("to home");
+        return <Navigate to="/" /> ;
+    }
+
+    // return UserLogin ?  Component : <Navigate to="/" />;
     
     };
     

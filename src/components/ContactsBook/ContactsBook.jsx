@@ -1,22 +1,17 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 
 import {ContactForm} from "./Form/ContactForm";
 import {ContactsList} from "./ContactsList/ContactsList";
 import {Filter} from "./Filter/Filter";
-// import { RedirectFunction } from 'react-router-dom';
 
 import css from './ContactsBook.module.css';
 import { getUserLogin } from 'redux/selectors';
-import { Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 
 const ContactsBook = () => {
-    const UserLogin = useSelector(getUserLogin);
-
-    if (!UserLogin) {
-        console.log(UserLogin);
-        return <Navigate to="/" /> ;
-    }    
+    const checkIsUserLogin = useSelector(getUserLogin);
+    console.log(checkIsUserLogin);
 
   return (
         <>
