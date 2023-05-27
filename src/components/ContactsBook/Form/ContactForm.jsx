@@ -53,11 +53,11 @@ export const ContactForm =()=> {
           value={name}
           onChange={handleChange}
           className={css.form__input}
-          type="text"
+          type="name"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-          required/>
+          required />
         <label htmlFor="number">Number</label>
         <input
           value={number}

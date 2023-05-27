@@ -10,7 +10,7 @@
     display: flex;
     /* flex-direction: column; */
     /* font-weight: bolder; */
-    color: #808080;
+    color: #ababab;
     flex-direction: column;
     margin-top: 24px;
     row-gap: 16px;
@@ -51,7 +51,8 @@
                 0 0 80px #8B57C6;
   }
 
-  .form__input{
+  .form__input {
+    z-index: 2;
     background: #212123;
     border-radius: 8px;
     color: #808080;
