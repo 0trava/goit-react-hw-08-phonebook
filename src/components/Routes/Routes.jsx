@@ -5,7 +5,7 @@ import { ROUTES } from "../Utils/routes";
 
 import Home from "../Home/Home";
 import ContactsBook from "../ContactsBook/ContactsBook";
-import {PrivateRoute} from "./PrivateRoute";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -15,7 +15,6 @@ const AppRoutes = () => (
     <Route path={ROUTES.CONTACTS} element={
       <PrivateRoute><ContactsBook/></PrivateRoute>
     } />
-    {/* <Route path={ROUTES.CONTACTS} element={<ContactsBook/>}/> */}
 
   </Routes>
 );

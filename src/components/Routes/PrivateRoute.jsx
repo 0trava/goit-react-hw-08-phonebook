@@ -8,16 +8,7 @@ export const PrivateRoute =  ({ children}) => {
     // const userIsLogin = useSelector(getUserLogin);
     console.log(userIsLogin);
 
-    // if (UserLogin) {
-    //     console.log("Load");
-    //     return Component;
-
-    // } else {
-    //     console.log("to home");
-    //     return <Navigate to="/" /> ;
-    // }
-
-    return userIsLogin ?  children : (<Navigate to="/" />);
+    return userIsLogin ?  children : <Navigate to="/" />;
     
     };
 
