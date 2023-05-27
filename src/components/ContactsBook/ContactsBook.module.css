@@ -2,7 +2,7 @@
 
     padding: 20px;
     border-radius: 6px;
-    width: calc((100vw / 3));
+    width: calc((100vw / 2));
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -17,7 +17,7 @@
     /* background-color: #191919; */
     padding: 20px;
     border-radius: 6px;
-    width: calc((100vw / 3));
+    width: calc((100vw / 2));
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
