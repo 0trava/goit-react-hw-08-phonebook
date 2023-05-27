@@ -2,6 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 
+
 // axios.defaults.baseURL = 'https://646521639c09d77a62e49d07.mockapi.io/contacts';
 // персональний mock-сервер
 
@@ -70,7 +71,7 @@ export const logOutUser = createAsyncThunk(
   async () => {
   try {
       // ПОВЕРТАЄМО НА ГОЛОВНУ СТОРІНКУ
-      
+
 
 
 
