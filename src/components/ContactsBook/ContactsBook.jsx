@@ -8,12 +8,14 @@ import {Filter} from "./Filter/Filter";
 
 import css from './ContactsBook.module.css';
 import { getUserLogin } from 'redux/selectors';
+import { Navigate } from 'react-router-dom';
 
 const ContactsBook = () => {
     const UserLogin = useSelector(getUserLogin);
 
     if (!UserLogin) {
-        return 
+        console.log(UserLogin);
+        return <Navigate to="/" /> ;
     }    
 
   return (
