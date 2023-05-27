@@ -28,16 +28,14 @@ export const fetchCurrentUser = createAsyncThunk(
     const gettoken = state.contacts.token;
 
     if (gettoken === '') {
-      return console.log("token is empty");
+      return console.log(gettoken);
     } else {
-      console.log(gettoken);
       token.set(gettoken);
       try {
         const {data} = await axios.get('/users/current');
         console.log(data);
         return data;
         } catch (error) {
-          alert("error");
         }
     }
 });

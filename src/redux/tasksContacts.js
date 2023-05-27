@@ -4,7 +4,7 @@ import { fetchContacts, addContact, deleteContact, registerUser, logInUser, logO
 
 
 const initialState = {
-  currentUser: '',
+  currentUser: { email: "", password: null, name: "" },
   token: '',
   isLogin: false,
   items: [],
@@ -14,9 +14,6 @@ const initialState = {
   isLoading: false,
   error: null,
 };
-
-// const startWork = (JSON.parse(window.localStorage.getItem(USER)) ?? initialState); // якщо в localStorage є контакти, то використовуємо їх, якщо ні, то використовуємо початковий масив
-
 
 const handlePending = state => {
   return {...state, isLoading: true, };
@@ -49,14 +46,7 @@ const handleAddUserSuccess = (state, action) => {
   };
 };
 
-const handleCurrentUserSuccess = (state, action) => {
-  return { ...state, 
-    isLoading: false, 
-    error: null,
-    currentUser: action.payload,
-    isLogin: true,
-  };
-};
+
 
 
 
@@ -71,7 +61,27 @@ const handleLoginUserSuccess = (state, action) => {
 };
 
 export const handlelogOutUser = state => {
-  return state = initialState;
+
+  return { ...state, 
+    isLoading: false, 
+    error: null,
+    currentUser: { email: "", password: "", name: "" },
+    token: '',
+    isLogin: false,
+  };
+};
+
+const handleCurrentUserSuccess = (state, action) => {
+  console.log(action);
+  if (action.payload) {
+    return { ...state, 
+      isLoading: false, 
+      error: null,
+      currentUser: action.payload,
+      isLogin: true,
+    };
+  }
+
 };
 
 // для кожного з цих екшенів буде створено actionCreator
@@ -94,6 +104,7 @@ const contactsSlice = createSlice({
     [logInUser.rejected]: handleRejected,
     [logOutUser.fulfilled]: handlelogOutUser,
     [fetchCurrentUser.fulfilled]: handleCurrentUserSuccess,
+    [fetchCurrentUser.rejected]: handlelogOutUser,
   },
 });
 

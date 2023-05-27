@@ -11,6 +11,9 @@ const Header = () => {
     const checkIsUserLogin = useSelector(getUserLogin);
     const user = useSelector(getUser);
 
+    console.log(checkIsUserLogin);
+    console.log(user);
+
     const openForm = () => {
         dispatch(toggleFormType("signup"));
         dispatch(toggleForm(true));
