@@ -15,7 +15,8 @@ export const ContactsList = () =>{
     }, [dispatch]);
 
     // ОТРИМАННЯ МАСИВУ ДАННИХ
-    const isLoading = useSelector(getIsLoading);
+    // const isLoading = useSelector(getIsLoading);
+    const  isLoading = true;
     const filteredContacts = useSelector (getFilteredContacts);
 
 

@@ -4,10 +4,12 @@
     height: var(--dim);
     position: relative;
     animation: spin988 2s linear infinite;
+    left: 47%;
+    top:20vh;
   }
   
   .loader .circle {
-    --color: #333;
+    --color:#8B57C6;
     --dim: 1.2rem;
     width: var(--dim);
     height: var(--dim);
