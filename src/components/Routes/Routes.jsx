@@ -13,7 +13,7 @@ const AppRoutes = () => (
   <Routes>
     <Route path={ROUTES.HOME} index element={<Home />} />
     <Route path={ROUTES.CONTACTS} element={
-      <PrivateRoute component= {<ContactsBook/>}/>
+      <PrivateRoute><ContactsBook/></PrivateRoute>
     } />
     {/* <Route path={ROUTES.CONTACTS} element={<ContactsBook/>}/> */}
 

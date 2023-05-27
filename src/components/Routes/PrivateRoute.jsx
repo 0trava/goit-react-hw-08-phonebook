@@ -1,23 +1,27 @@
 import { Navigate } from 'react-router-dom';
 
 
-export const PrivateRoute =  ({ component: Component}) => {
 
-    const UserLogin = window.localStorage.getItem('checkLogIn');
-    console.log(UserLogin);
+export const PrivateRoute =  ({ children}) => {
 
-    if (UserLogin) {
-        console.log("Load");
-        return Component;
+    const userIsLogin = window.localStorage.getItem('checkLogIn');
+    // const userIsLogin = useSelector(getUserLogin);
+    console.log(userIsLogin);
 
-    } else {
-        console.log("to home");
-        return <Navigate to="/" /> ;
-    }
+    // if (UserLogin) {
+    //     console.log("Load");
+    //     return Component;
 
-    // return UserLogin ?  Component : <Navigate to="/" />;
+    // } else {
+    //     console.log("to home");
+    //     return <Navigate to="/" /> ;
+    // }
+
+    return userIsLogin ?  children : (<Navigate to="/" />);
     
     };
+
+    export default PrivateRoute;
     
 
 
