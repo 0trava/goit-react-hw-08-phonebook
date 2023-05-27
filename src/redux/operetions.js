@@ -70,11 +70,6 @@ export const logOutUser = createAsyncThunk(
   'user/logout', 
   async () => {
   try {
-      // ПОВЕРТАЄМО НА ГОЛОВНУ СТОРІНКУ
-
-
-
-
 
       await axios.post('/users/logout');
       token.unset();// Удаляємо токен для всім наступних запитів в axios
