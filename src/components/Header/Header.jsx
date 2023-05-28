@@ -30,7 +30,7 @@ const Header = () => {
 
         <div className={css.header}>
             <div className={css.contacts__navigate}>
-                    <a href="/" className={css.logo_box}>
+                    <a href="home" className={css.logo_box}>
                         <div className={css.icon}/>
                         <p className={css.logo}> <span>H</span>OME</p>
                     </a>
