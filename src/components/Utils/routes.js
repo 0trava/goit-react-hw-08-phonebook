@@ -1,4 +1,4 @@
 export const ROUTES = {
-    HOME: "/",
+    HOME: "/-goit-react-hw-08-phonebook",
     CONTACTS: "/contacts",
   };
