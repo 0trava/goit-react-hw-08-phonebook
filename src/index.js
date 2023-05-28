@@ -1,4 +1,4 @@
-// Встановлення бібліотеки:
+// Встановлення бібліотек:
 // $ npm install @reduxjs/toolkit
 // $ npm install redux
 // $ npm install @redux-devtools/extension
@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <PersistGate loading={null} persistor={persistor}>
           <BrowserRouter basename="/goit-react-hw-08-phonebook/">
             <App />
-          </BrowserRouter>
+          </BrowserRouter >
       </PersistGate>
     </Provider>
     

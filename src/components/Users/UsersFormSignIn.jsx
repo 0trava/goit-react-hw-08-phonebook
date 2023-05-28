@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-
-
 import css from './UsersForm.module.css';
 import {logInUser} from "../../redux/operetions";
 import { useNavigate } from 'react-router-dom';
@@ -13,7 +11,6 @@ const UsersFormSignIn = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  // const toggleCurrentFormType = "signup";
 
  const hadleChange = ({ target: { name, value }}) => {
    if (name === "password") {setPassword(value);}
