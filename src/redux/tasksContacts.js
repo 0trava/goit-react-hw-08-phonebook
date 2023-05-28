@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchContacts, addContact, deleteContact, registerUser, logInUser, logOutUser, fetchCurrentUser } from "../redux/operetions";
-// const USER = 'contacts'; // ключ для localStorage
 
 
 const initialState = {
@@ -73,7 +72,6 @@ const handleCurrentUserSuccess = (state, action) => {
       isLogin: true,
     };
   }
-
 };
 
 
@@ -81,23 +79,40 @@ const handleCurrentUserSuccess = (state, action) => {
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState,
-  extraReducers: {
-    [fetchContacts.pending]: handlePending,
-    [registerUser.pending]: handlePending,
-    [addContact.pending]: handlePending,
-    [deleteContact.pending]: handlePending,
-    [fetchContacts.rejected]: handleRejected,
-    [addContact.rejected]: handleRejected,
-    [deleteContact.rejected]: handleRejected,
-    [fetchContacts.fulfilled]: handleFetchContactsSuccess,
-    [addContact.fulfilled]: handleAddContactSuccess,
-    [deleteContact.fulfilled]: handleDeleteContactSuccess,
-    [registerUser.fulfilled]: handleAddUserSuccess,
-    [logInUser.fulfilled]: handleLoginUserSuccess,
-    [logInUser.rejected]: handleRejected,
-    [logOutUser.fulfilled]: handlelogOutUser,
-    [fetchCurrentUser.fulfilled]: handleCurrentUserSuccess,
-    [fetchCurrentUser.rejected]: handlelogOutUser,
+  extraReducers: builder =>  {
+    builder
+    .addCase(fetchContacts.pending, handlePending)
+    .addCase(registerUser.pending, handlePending)
+    .addCase(deleteContact.pending, handlePending)
+    .addCase(fetchContacts.rejected, handleRejected)
+    .addCase(addContact.rejected, handleRejected)
+    .addCase(deleteContact.rejected, handleRejected)
+    .addCase(fetchContacts.fulfilled, handleFetchContactsSuccess)
+    .addCase(addContact.fulfilled, handleAddContactSuccess)
+    .addCase(deleteContact.fulfilled, handleDeleteContactSuccess)
+    .addCase(registerUser.fulfilled, handleAddUserSuccess)
+    .addCase(logInUser.fulfilled, handleLoginUserSuccess)
+    .addCase(logInUser.rejected, handleRejected)
+    .addCase(logOutUser.fulfilled, handlelogOutUser)
+    .addCase(fetchCurrentUser.fulfilled, handleCurrentUserSuccess)
+    .addCase(fetchCurrentUser.rejected, handlelogOutUser)
+
+    // Застаріла версія
+    // [registerUser.pending]: handlePending,
+    // [addContact.pending]: handlePending,
+    // [deleteContact.pending]: handlePending,
+    // [fetchContacts.rejected]: handleRejected,
+    // [addContact.rejected]: handleRejected,
+    // [deleteContact.rejected]: handleRejected,
+    // [fetchContacts.fulfilled]: handleFetchContactsSuccess,
+    // [addContact.fulfilled]: handleAddContactSuccess,
+    // [deleteContact.fulfilled]: handleDeleteContactSuccess,
+    // [registerUser.fulfilled]: handleAddUserSuccess,
+    // [logInUser.fulfilled]: handleLoginUserSuccess,
+    // [logInUser.rejected]: handleRejected,
+    // [logOutUser.fulfilled]: handlelogOutUser,
+    // [fetchCurrentUser.fulfilled]: handleCurrentUserSuccess,
+    // [fetchCurrentUser.rejected]: handlelogOutUser,
   },
 });
 
