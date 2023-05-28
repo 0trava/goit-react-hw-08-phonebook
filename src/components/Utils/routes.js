@@ -1,4 +1,4 @@
 export const ROUTES = {
-    HOME: "/",
-    CONTACTS: "/contacts",
+    HOME: "",
+    CONTACTS: "contacts",
   };

@@ -4,12 +4,14 @@ import { useDispatch } from 'react-redux';
 
 import css from './UsersForm.module.css';
 import {logInUser} from "../../redux/operetions";
+import { toggleForm } from 'redux/Login form/form';
 
 
-const UsersFormSignIn = ({ toggleCurrentFormType, closeForm }) => {
+const UsersFormSignIn = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  // const toggleCurrentFormType = "signup";
 
  const hadleChange = ({ target: { name, value }}) => {
    if (name === "password") {setPassword(value);}
@@ -28,6 +30,8 @@ const UsersFormSignIn = ({ toggleCurrentFormType, closeForm }) => {
      alert("All fields must be filled");
    }
  }
+
+ const closeForm = () => dispatch(toggleForm(false));
 
 
   return (
@@ -66,7 +70,7 @@ const UsersFormSignIn = ({ toggleCurrentFormType, closeForm }) => {
 
             <input value="Log in" type="submit" className={css.submite}/>
 
-            <div className={css.span}>Don't have an account?  <span onClick={() => toggleCurrentFormType("signin")}>Sign up</span></div>
+            <div className={css.span}>Don't have an account?  <span onClick={() => {}}>Sign up</span></div>
         </form>
       </div>
     </div>

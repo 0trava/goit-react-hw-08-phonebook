@@ -29,11 +29,11 @@ const Header = () => {
 
         <div className={css.header}>
             <div className={css.contacts__navigate}>
-                    <a href={ROUTES.HOME} className={css.logo_box}>
+                    <a href="/" className={css.logo_box}>
                         <div className={css.icon}/>
                         <p className={css.logo}> <span>H</span>OME</p>
                     </a>
-                    {checkIsUserLogin ? ( <a href="/contacts" className={css.logo_box2}>
+                    {checkIsUserLogin ? ( <a href="contacts" className={css.logo_box2}>
                         <p className={css.logo}> <span>C</span>ONTACTS</p>
                     </a>) : (<></>) }
 
