@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-// import { ROUTES } from "../Utils/routes";
+import { ROUTES } from "../Utils/routes";
 
 
 import Home from "../Home/Home";
@@ -13,9 +13,9 @@ const AppRoutes = () => {
   return (
     <>
   <Routes>
-      <Route path="/" index element={<Home />}/>
-      <Route path="/contacts" element={<PrivateRoute><ContactsBook/></PrivateRoute>} />
-      <Route path="*" element={<Home />}/>
+      <Route index element={<Home />} />
+      <Route path={ROUTES.CONTACTS} element={<PrivateRoute><ContactsBook/></PrivateRoute>} />
+      <Route path={ROUTES.CONTACTS} element={<Home />}/>
 
 
   </Routes>

@@ -5,18 +5,12 @@ import {ContactsList} from "./ContactsList/ContactsList";
 import {Filter} from "./Filter/Filter";
 
 import css from './ContactsBook.module.css';
-// import { getUserLogin } from 'redux/selectors';
-// import { useSelector } from 'react-redux';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 const ContactsBook = () => {
     const userIsLogin = window.localStorage.getItem('checkLogIn');
 
-
-  useEffect(()=> {
-    console.log(userIsLogin);  
-  }, [userIsLogin])
 
   return (userIsLogin === 'true') ?  (
         <>

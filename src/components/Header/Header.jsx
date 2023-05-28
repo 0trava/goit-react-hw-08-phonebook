@@ -5,12 +5,15 @@ import { getUserLogin, getUser } from "../../redux/selectors";
 import {logOutUser} from '../../redux/operetions';
 
 import css from './Header.module.css';
+import { useNavigate } from 'react-router-dom';
+import { ROUTES } from 'components/Utils/routes';
 // import { Navigate } from 'react-router-dom';
 
 const Header = () => {
     const dispatch = useDispatch();
     const checkIsUserLogin = useSelector(getUserLogin);
     const user = useSelector(getUser);
+    const navigate = useNavigate();
 
     const openForm = () => {
         dispatch(toggleFormType("signup"));
@@ -19,6 +22,7 @@ const Header = () => {
 
     const handleLogOut = () => {
         dispatch(logOutUser());
+        navigate(ROUTES.HOME);
 
     };
 
