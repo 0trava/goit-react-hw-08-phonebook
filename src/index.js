@@ -7,9 +7,8 @@
 
 
 import React from 'react';
-import ReactDOM from 'react-dom/client'; //бібліотека, яка надає методи для рендерингу
+import ReactDOM from 'react-dom/client'; 
 import {App} from 'components/App';
-// import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import './index.css';
 
@@ -29,7 +28,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </Provider>
     
   </React.StrictMode>,
-  // document.getElementById('root')
 );
 
 //  basename="/-goit-react-hw-08-phonebook/"
