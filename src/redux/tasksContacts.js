@@ -8,9 +8,6 @@ const initialState = {
   token: '',
   isLogin: false,
   items: [],
-  // contacts: [],
-  formType: "signup",
-  showForm: false,
   isLoading: false,
   error: null,
 };
@@ -84,7 +81,6 @@ const handleCurrentUserSuccess = (state, action) => {
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState,
-
   extraReducers: {
     [fetchContacts.pending]: handlePending,
     [registerUser.pending]: handlePending,

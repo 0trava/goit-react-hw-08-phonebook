@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { ROUTES } from "../Utils/routes";
 
 
@@ -13,11 +13,9 @@ const AppRoutes = () => {
   return (
     <>
   <Routes>
-      <Route index element={<Home />} />
-      <Route path={ROUTES.CONTACTS} element={<PrivateRoute><ContactsBook/></PrivateRoute>} />
-      <Route path={ROUTES.CONTACTS} element={<Home />}/>
-
-
+        <Route path={ROUTES.CONTACTS} element={<PrivateRoute><ContactsBook/></PrivateRoute>} />
+        <Route path={ROUTES.HOME} index element={<Home />}/>
+        <Route path="*" element={<Navigate to="/" />} />
   </Routes>
   </>)
 };
