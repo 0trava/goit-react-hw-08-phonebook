@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import {ContactForm} from "./Form/ContactForm";
 import {ContactsList} from "./ContactsList/ContactsList";
 import {Filter} from "./Filter/Filter";
 
 import css from './ContactsBook.module.css';
-import { getUserLogin } from 'redux/selectors';
-import { useSelector } from 'react-redux';
+// import { getUserLogin } from 'redux/selectors';
+// import { useSelector } from 'react-redux';
+import { Navigate } from 'react-router-dom';
 
 
 const ContactsBook = () => {
-    const checkIsUserLogin = useSelector(getUserLogin);
-    console.log(checkIsUserLogin);
+    const userIsLogin = window.localStorage.getItem('checkLogIn');
 
-  return (
+
+  useEffect(()=> {
+    console.log(userIsLogin);  
+  }, [userIsLogin])
+
+  return (userIsLogin === 'true') ?  (
         <>
             <div className={css.contact_boximg}>
                 <h2 className={css.section_title}>Phonebook</h2>
@@ -27,7 +32,7 @@ const ContactsBook = () => {
                 <ContactsList/>
             </div>
             </>
-  )
+  ) : <Navigate to='/' />;
 }
 
 export default ContactsBook;

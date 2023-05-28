@@ -5,6 +5,7 @@ import { getUserLogin, getUser } from "../../redux/selectors";
 import {logOutUser} from '../../redux/operetions';
 
 import css from './Header.module.css';
+// import { Navigate } from 'react-router-dom';
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -17,7 +18,6 @@ const Header = () => {
     };
 
     const handleLogOut = () => {
-
         dispatch(logOutUser());
 
     };
