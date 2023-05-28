@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import {registerUser} from "../../redux/operetions";
 
@@ -7,8 +8,10 @@ import css from './UsersForm.module.css';
 
 
 
-const UsersFormSignUp = ({ toggleCurrentFormType, closeForm }) => {
+
+const UsersFormSignUp = () => {
    const dispatch = useDispatch();
+   const navigate = useNavigate();
    const [name, setName] = useState('');
    const [email, setEmail] = useState('');
    const [password, setPassword] = useState('');
@@ -27,7 +30,7 @@ const UsersFormSignUp = ({ toggleCurrentFormType, closeForm }) => {
       setName('');
       setEmail('');
       setPassword('');
-      closeForm();
+      navigate("/");
     } else {
       alert("All fields must be filled");
     }
@@ -36,9 +39,11 @@ const UsersFormSignUp = ({ toggleCurrentFormType, closeForm }) => {
   }
 
   return (
-    <div className={css.body}>
+    <>
+      <div className={css.overlay} onClick={() => navigate("/")} />
+      <div className={css.body}>
       <div className={css.form_container}>
-          <div className={css.close} onClick={closeForm}>
+          <div className={css.close} onClick={() => navigate("/")}>
             <svg>
               <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#close`} />
             </svg>
@@ -53,8 +58,8 @@ const UsersFormSignUp = ({ toggleCurrentFormType, closeForm }) => {
             onChange={hadleChange} 
             value={name} 
             autoComplete='off'
-            pattern="[A-Za-z]{7,25}"
-            title="How you want that I name you" 
+            pattern="([A-Za-z]+[\-\s]?){7,25}"
+            title="Enter your first and last name" 
             />
             </span>
 
@@ -74,7 +79,7 @@ const UsersFormSignUp = ({ toggleCurrentFormType, closeForm }) => {
             onChange={hadleChange} 
             value={password} 
             autoComplete='off' 
-            pattern="[0-9a-fA-F]{7,12}"
+            pattern="[0-9a-fA-F]{7,24}"
             title="Password should contains at least 7 symbols"
             /></span>
 
@@ -82,10 +87,12 @@ const UsersFormSignUp = ({ toggleCurrentFormType, closeForm }) => {
 
             <input value="Get Started" type="submit" className={css.submite}/>
 
-            <div className={css.span}>Already have an account? <span onClick={() => toggleCurrentFormType("signup")}>Sign in</span></div>
+            <div className={css.span}>Already have an account? <a href="login">Sign in</a></div>
         </form>
       </div>
     </div>
+    </>
+
 
   );
 }

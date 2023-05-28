@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleForm, toggleFormType } from '../../redux/Login form/form';
+// import { toggleForm, toggleFormType } from '../../redux/Login form/form';
 import { getUserLogin, getUser } from "../../redux/selectors";
 import {logOutUser} from '../../redux/operetions';
 
@@ -15,8 +15,9 @@ const Header = () => {
     const navigate = useNavigate();
 
     const openForm = () => {
-        dispatch(toggleFormType("signup"));
-        dispatch(toggleForm(true));
+        navigate(ROUTES.LOGIN);
+        // dispatch(toggleFormType("signup"));
+        // dispatch(toggleForm(true));
     };
 
 // LOG OUT

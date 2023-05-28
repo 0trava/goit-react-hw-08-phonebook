@@ -1,7 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { contactsReducer } from "./tasksContacts";
 import { filterReducer } from "./filterContacts";
-import formReduser from './Login form/form';
 import {
   persistReducer,
   persistStore,
@@ -27,7 +26,6 @@ export const store = configureStore({
     // contacts: contactsReducer,
     contacts: persistReducer(persistConfig, contactsReducer),
     filter: filterReducer,
-    form: formReduser,
   },
   middleware: getDefaultMiddleware =>
   getDefaultMiddleware({

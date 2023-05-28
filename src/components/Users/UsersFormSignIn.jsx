@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 
+
 import css from './UsersForm.module.css';
 import {logInUser} from "../../redux/operetions";
-import { toggleForm } from 'redux/Login form/form';
+import { useNavigate } from 'react-router-dom';
 
 
 const UsersFormSignIn = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -25,19 +27,19 @@ const UsersFormSignIn = () => {
      dispatch(logInUser({email, password}))
      setPassword('');
      setEmail('');
-     closeForm();
+     navigate("/");
    } else {
      alert("All fields must be filled");
    }
  }
 
- const closeForm = () => dispatch(toggleForm(false));
-
 
   return (
+    <>
+    <div className={css.overlay} onClick={() => navigate("/")} />
 <div className={css.body}>
       <div className={css.form_container}>
-          <div className={css.close} onClick={closeForm}>
+          <div className={css.close} onClick={() => navigate("/")}>
             <svg>
               <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#close`} />
             </svg>
@@ -70,10 +72,12 @@ const UsersFormSignIn = () => {
 
             <input value="Log in" type="submit" className={css.submite}/>
 
-            <div className={css.span}>Don't have an account?  <span onClick={() => {}}>Sign up</span></div>
+            <div className={css.span}>Don't have an account?  <a href="register"  onClick={() => {}}>Sign up</a></div>
         </form>
       </div>
     </div>
+    </>
+
   );
 }
 
