@@ -8,7 +8,7 @@ function Footer() {
   return (
     <section className={css.footer}>
         <div>
-            <a href=" " className={css.logo_box}>
+            <a href="/" className={css.logo_box}>
                 <p className={css.logo}> <span>C</span>ONTACT <span>B</span>OOK</p>
             </a>
         </div>
