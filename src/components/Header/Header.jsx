@@ -7,7 +7,6 @@ import {logOutUser} from '../../redux/operetions';
 import css from './Header.module.css';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from 'components/Utils/routes';
-// import { Navigate } from 'react-router-dom';
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -20,10 +19,10 @@ const Header = () => {
         dispatch(toggleForm(true));
     };
 
+// LOG OUT
     const handleLogOut = () => {
         dispatch(logOutUser());
-        navigate(ROUTES.HOME);
-
+        navigate(ROUTES.HOME);// Повертаємо на головну сторінку  
     };
 
   return (

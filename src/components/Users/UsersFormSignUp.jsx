@@ -48,7 +48,7 @@ const UsersFormSignUp = ({ toggleCurrentFormType, closeForm }) => {
             <h2 className={css.title}>Create Account</h2>
 
             <span className={css.input_span}>
-            <label className={css.label} for="name">Name</label>
+            <label className={css.label} id="name">Name</label>
             <input id="name" name="name" type="text" 
             onChange={hadleChange} 
             value={name} 
@@ -59,7 +59,7 @@ const UsersFormSignUp = ({ toggleCurrentFormType, closeForm }) => {
             </span>
 
             <span className={css.input_span}>
-            <label className={css.label} for="email">Email</label>
+            <label className={css.label} id="email">Email</label>
             <input id="email" name="email" type="email" 
             onChange={hadleChange} 
             value={email} 
@@ -69,7 +69,7 @@ const UsersFormSignUp = ({ toggleCurrentFormType, closeForm }) => {
             </span>
 
             <span  className={css.input_span}>
-            <label  className={css.label} for="password">Password</label>
+            <label  className={css.label} id="password">Password</label>
             <input id="password" name="password" type="password" 
             onChange={hadleChange} 
             value={password} 

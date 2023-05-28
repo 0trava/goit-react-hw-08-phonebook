@@ -20,5 +20,5 @@ const formReduser = createSlice({
   });
 
 
-export const { addItemToCart, removeItemFromCart, toggleForm, toggleFormType } = formReduser.actions;
+export const { toggleForm, toggleFormType } = formReduser.actions;
 export default formReduser.reducer;

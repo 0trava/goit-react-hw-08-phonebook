@@ -11,9 +11,6 @@ export const Filter = () => {
   const dispatch = useDispatch();// Отримуємо посилання на функцію відправки екшенів
   const filter = useSelector(getStatusFilter);// ОТРИМАННЯ FILTER
 
-  console.log(filter);
-
-
     return (
       <div className={css.form__filter}>
           <label htmlFor="Find"></label>
