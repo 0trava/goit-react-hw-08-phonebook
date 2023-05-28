@@ -15,7 +15,7 @@ const AppRoutes = () => {
   return (
     <>
   <Routes>
-        <Route exact path="/" render={props => <Home {...props} />}/>
+        <Route path="/" element={<Home />}/>
         <Route path={ROUTES.HOME} index element={<Home />}/>
         <Route path={ROUTES.CONTACTS} element={<PrivateRoute><ContactsBook/></PrivateRoute>} />
         <Route path={ROUTES.LOGIN} index element={<UsersFormSignIn />} />

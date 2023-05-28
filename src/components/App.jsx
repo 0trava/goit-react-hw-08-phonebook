@@ -7,14 +7,22 @@ import Footer from './Footer/Footer';
 // import UserForm from './Users/UserForm';
 import AppRoutes from './Routes/Routes';
 
+
 import css from "./App.module.css"; // підключення стилів
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import {fetchCurrentUser} from '.././redux/operetions';
+import { useNavigate } from 'react-router-dom';
+
 
 
 export const App = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(()=>{
+    navigate("/");
+  })
 
   useEffect (()=> {
     dispatch(fetchCurrentUser());
