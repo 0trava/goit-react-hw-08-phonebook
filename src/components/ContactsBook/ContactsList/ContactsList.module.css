@@ -1,6 +1,81 @@
-.contacts__list{
-    padding: 10px;
-    width: 100%;
+
+@media (min-width: 320px){
+    .contacts__list{
+        padding: 10px;
+        width: 75%;
+
+    }
+
+    .contacts__btn{
+        max-width: 50px;
+        background: #6c3eb8;
+        cursor: pointer;
+        font-weight: 600;
+        padding: 9px 10px;
+        border-radius: 17px;
+        transition: 0.5s ease;
+        border: none;
+        color: #fff;
+        font-family: Montserrat,Roboto,sans-serif;
+        font-size: 10px;
+    }
+
+    .contacts__block{
+        width: 100%;
+    }
+
+    .contacts__item{
+        display: flex;
+        align-items: center;
+        width: 80%;
+    }
+    
+
+}
+
+
+  
+@media (min-width: 768px){
+    .contacts__list{
+        padding: 10px;
+        width: 35vw;
+    }
+
+    .contacts__btn{
+        max-width: 100px;
+        background: #6c3eb8;
+        cursor: pointer;
+        font-weight: 600;
+        padding: 9px 10px;
+        border-radius: 17px;
+        transition: 0.5s ease;
+        border: none;
+        color: #fff;
+        font-family: Montserrat,Roboto,sans-serif;
+        font-size: 12px;
+    }
+
+    .contacts__block{
+        display: flex;
+        width: 100%;
+    }
+
+    .contacts__item{
+        display: flex-start;
+        width: 80%;
+
+    }
+    
+
+}
+
+@media (min-width: 1000px){
+    .contacts__btn{
+        max-width: 200px;
+        padding: 9px 20px;
+        border-radius: 17px;
+        font-size: 16px;
+    }
 
 }
 
@@ -25,7 +100,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    width: 250px;
+    width: 100%;
     color: #6C3EB8;
 }
 
@@ -38,7 +113,7 @@
     font-size: 16px;
     line-height: 20px;
     color: #afaeae;
-    width: 100px;
+    width: 100%;
 }
 
 
@@ -46,7 +121,7 @@
     display: flex;
     font-weight: bolder;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     background-color: #212123;
     border-radius: 9px;
     margin-top: 5px;
@@ -58,19 +133,7 @@
 
 
 
-.contacts__btn{
-    max-width: 200px;
-    background: #6c3eb8;
-    cursor: pointer;
-    font-weight: 600;
-    padding: 9px 20px;
-    border-radius: 17px;
-    transition: 0.5s ease;
-    border: none;
-    color: #fff;
-    font-family: Montserrat,Roboto,sans-serif;
-    font-size: 16px;
-}
+
 
 .contacts__btn:hover, .contacts__btn:focus {
     color: #8B57C6;

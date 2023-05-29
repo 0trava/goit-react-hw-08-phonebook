@@ -23,9 +23,13 @@ export const ContactsList = () =>{
             <ul className={css.contacts__list}>
                 {isLoading ?  (<Loader/>) : filteredContacts.map(contact => {    
                 return (<li key={contact.id}>
+                  <div className={css.contacts__item}>
                    <img   className={css.avatar} src="https://user-life.com/uploads/posts/2020-03/1584366922_1.png" alt="avatar" width="30px" />
+                    <div className={css.contacts__block}>
                    <p className={css.contacts__text_name}>{contact.name}</p>
                    <p className={css.contacts__number}>{contact.number}</p> 
+                    </div>
+                  </div>
                    <button onClick={e => dispatch(deleteContact(e.currentTarget.id))} id = {contact.id} className={css.contacts__btn} type="button">Delete</button>
                 </li>)
                 })}

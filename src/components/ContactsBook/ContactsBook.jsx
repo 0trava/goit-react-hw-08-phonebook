@@ -21,7 +21,7 @@ const ContactsBook = () => {
 
                 <ContactsList/>
             </div>
-            </>
+        </>
   );
 }
 
