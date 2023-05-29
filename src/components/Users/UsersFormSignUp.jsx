@@ -79,7 +79,7 @@ const UsersFormSignUp = () => {
             onChange={hadleChange} 
             value={password} 
             autoComplete='off' 
-            pattern="[0-9a-fA-F]{7,24}"
+            pattern="[0-9a-zA-Z!@#$%^&*]{6,}"
             title="Password should contains at least 7 symbols"
             /></span>
 
